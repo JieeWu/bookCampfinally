@@ -1,0 +1,369 @@
+/*----------- member 中間底版 --------------*/
+.card-board-top {
+  display: flex;
+  width: 100%;
+  padding: 1.2rem;
+  color: white;
+  box-shadow: inset 0 -4px 0 rgba(255, 255, 255, 0.233);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.member-titles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-board-body {
+  /* position: relative; */
+  min-height: 60vh;
+  /* overflow: auto; */
+  padding-inline: 2rem;
+}
+
+/*----------- member 側邊 --------------*/
+.member-information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 1.5rem 0.5rem;
+}
+
+.management-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  height: calc(100vh - 147px);
+  background:
+    linear-gradient(135deg, transparent 0, var(--main-purple) 0) top left,
+    linear-gradient(-135deg, transparent 4px, var(--main-purple) 0) top right,
+    linear-gradient(-45deg, transparent 4px, var(--main-purple) 0) bottom right,
+    linear-gradient(45deg, transparent 0, var(--main-purple) 0) bottom left;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(5px 5px 0 var(--main-colorpurple));
+  padding-inline: 0;
+  position: sticky;
+  top: 145px;
+}
+
+.member-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: var(--main-darkpurple);
+  padding-block: 1rem;
+  overflow: auto;
+}
+
+.member-main-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 85%;
+  padding: 0.5rem 1.5rem;
+  filter: drop-shadow(3px 3px 0 var(--main-brightpink));
+  transition: 0.4s;
+  margin-bottom: 1.2rem;
+}
+
+@keyframes shock {
+  0% {
+    transform: translateY(3px);
+  }
+  49% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  99% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+.member-main-btn i {
+  animation: shock 0.5s infinite;
+}
+
+.member-main-btn[aria-expanded='true'] {
+  font-weight: bold;
+  color: var(--main-darkpurple);
+  background-color: var(--main-yellow) !important;
+  box-shadow:
+    3px 0 0 var(--main-orange),
+    -3px 0 0 var(--main-orange),
+    0 -3px 0 var(--main-orange),
+    0 3px 0 var(--main-orange);
+}
+
+.member-main-btn:hover {
+  font-weight: bold;
+  color: var(--main-darkpurple);
+  background-color: var(--main-yellow) !important;
+}
+
+.pixel-purple {
+  box-shadow:
+    3px 0 0 var(--main-colorpurple),
+    -3px 0 0 var(--main-colorpurple),
+    0 -3px 0 var(--main-colorpurple),
+    0 3px 0 var(--main-colorpurple);
+}
+
+.pixel-purple:hover {
+  box-shadow:
+    3px 0 0 var(--main-orange),
+    -3px 0 0 var(--main-orange),
+    0 -3px 0 var(--main-orange),
+    0 3px 0 var(--main-orange);
+}
+
+.member-details {
+  width: 100%;
+  font-weight: bold;
+  background-color: transparent;
+  border: 0;
+  margin-top: -0.5rem;
+  padding: 0 1rem;
+}
+
+.member-details ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+}
+
+.member-details a {
+  display: flex;
+  width: 100%;
+  color: var(--white);
+  padding: 0.5rem 1.5rem;
+}
+
+.member-details li:hover {
+  background-color: var(--main-darkpink);
+  border-radius: 5px;
+}
+
+.management-block .footer {
+  background-color: var(--main-purple);
+  padding: 1.5rem 1rem;
+  width: 100%;
+}
+
+/*---------- 會員區輸入框 ----------*/
+.input-type {
+  align-items: center;
+  /* height: 100%; */
+  color: white;
+  border: none;
+  background-color: var(--main-darkpurple);
+  background:
+    linear-gradient(135deg, transparent 3px, var(--main-darkpurple) 0) top left,
+    linear-gradient(-135deg, transparent 3px, var(--main-darkpurple) 0) top
+      right,
+    linear-gradient(-45deg, transparent 3px, var(--main-darkpurple) 0) bottom
+      right,
+    linear-gradient(45deg, transparent 3px, var(--main-darkpurple) 0) bottom
+      left;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+}
+
+/*--------- 紫色細項背景 ----------*/
+.class-frame {
+  display: flex;
+  border-radius: 50px;
+  color: white;
+  background-color: var(--main-colorpurple);
+  padding: 0.25rem 1rem;
+  max-width: 100px;
+}
+
+/*--------- rwd ----------*/
+@media screen and (max-width: 768px) {
+  .mobile-phone {
+    padding-inline: 0;
+  }
+
+  .card-board-body {
+    min-height: 60vh;
+    height: 100%;
+    padding-inline: 1rem;
+  }
+
+    .class-frame {
+      margin-left: 0.5rem;
+    }
+  }
+
+    /* member-public */
+
+    .text-color-white{
+      color: white;
+    }
+  
+    .text-color-black{
+      color: black;
+    }
+
+    .card-day{
+      gap: 100px;
+    }
+  
+    /*----------------------*/
+  
+
+  /* member-card */
+
+.member-card {
+  display: flex;
+  min-height: 67vh;
+}
+
+.member-information-block {
+  position: relative;
+  margin-inline: 0.75rem;
+  height: 70%;
+  width: 100%;
+  padding: 3rem 1.5rem 1.5rem;
+}
+
+.member-daily-check {
+  margin-inline: 0.75rem;
+  height: 100%;
+  color: white;
+}
+
+.avatar-block {
+  position: absolute;
+  top: -33%;
+  left: calc(50% - 115px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 230px;
+  height: 100%;
+  max-height: 230px;
+  border-radius: 50%;
+  border: 5px solid var(--black);
+  background-color: var(--white);
+  box-shadow: 0 0 0 5px var(--main-brightpurple);
+  overflow: hidden;
+  z-index: 50;
+}
+
+.avatar-block img {
+  width: 100%;
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.member-card-block {
+  text-align: center;
+  width: 335px;
+  height: 240px;
+  margin: 20px auto;
+  border-radius: 20px;
+  background-color: beige;
+}
+
+.member-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 内容靠左对齐 */
+  text-align: left;
+  margin: 20px auto;
+}
+
+.member-avatar {
+  width: 220px;
+  height: 220px;
+  margin-top: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s; /* 添加过渡效果 */
+}
+
+.member-avatar:hover {
+  transform: scale(1.2); /* 鼠標懸停時放大 20% */
+  transition: transform 0.3s ease; /* 添加過渡效果，使放大動畫平滑 */
+}
+
+/* ------------------------------------- */
+
+/*  not login page  */
+
+.not-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+
+.not-login-img {
+  width: 200px;
+}
+
+.not-login-text {
+  color: black;
+}
+
+/* ------------------   */
+
+/*  register page  */
+.register-star {
+  color: red;
+}
+
+/* ------------------------*/
+
+/* 全局样式 */
+
+.container {
+  text-align: center;
+  border-radius: 20px;
+}
+
+.title {
+  margin: 2rem;
+}
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+  width: calc(100% / 7); /* 每周七天，每天的宽度占比 */
+  box-sizing: border-box;
+}
+
+.signed {
+  background-color: yellow; /* 已簽到样式 */
+}
+
+.future {
+  background-color: #fff; /* 未来日期的样式 */
+}
+
+.expired {
+  background-color: #CCC; /* 已过期日期的样式 */
+}

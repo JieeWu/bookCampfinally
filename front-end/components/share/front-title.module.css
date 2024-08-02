@@ -1,0 +1,20 @@
+.titleTheme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* 標題裝飾 */
+.sBlock {
+  min-width: 10px;
+  min-height: 10px;
+  background-color: var(--white);
+}
+
+.sLine {
+  width: 100%;
+  border-top: 2px solid var(--white);
+  height: 2px;
+  max-width: 260px;
+}

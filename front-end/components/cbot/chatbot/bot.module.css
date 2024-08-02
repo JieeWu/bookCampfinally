@@ -1,0 +1,21 @@
+.learning-options-container {
+  display: flex;
+  white-space: nowrap;
+  background-color: transparent !important;
+  overflow-x: auto; 
+  position: fixed;
+  width: 300px;
+   /* 或者您所需要的其他值 */
+  }
+  
+  .learning-option-button {
+    padding: 0.5rem;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 1px solid green;
+    margin: 3px;
+    color: #ffffff;
+  }
+  .chatbot-container {
+    position: relative;
+}

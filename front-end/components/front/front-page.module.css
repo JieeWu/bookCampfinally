@@ -1,0 +1,136 @@
+/* 廣告區塊 */
+.carouselImg {
+  overflow: hidden;
+  border-radius: 10px;
+  /* margin-inline: 1rem; */
+}
+
+.BottomAd {
+  height: 250px;
+}
+
+.BottomAd a {
+  text-decoration: none;
+}
+
+.topText {
+  display: flex;
+  flex-direction: column;
+  margin-block: auto;
+}
+
+.topText h5 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.top10Img {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  max-height: 350px;
+}
+
+.hotAd {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.registerBlock {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+}
+
+.registerBlock .registerText {
+  display: flex;
+  margin: 0 auto 0 0;
+}
+
+.wellBook {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-image: url(/img/test/Subtract.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.ad3 {
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/test/300x300_ad_6.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: inset -6px -6px 0 rgba(0, 0, 0, 0.121);
+}
+
+.searchBook {
+  position: absolute;
+  left: 10%;
+  bottom: 2%;
+}
+
+.searchBook img {
+  width: 100%;
+}
+
+.searchBookText {
+  position: absolute;
+  top: -30%;
+  left: 20%;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: 100px;
+  background-image: url(/img/test/box1_1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 1.5rem;
+  z-index: 5;
+}
+
+/* rwd版面 */
+@media screen and (max-width: 1200px) {
+  .registerBlock .registerText {
+    margin: 0 auto 0 auto;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carouselImg {
+    margin: 0.5rem 0;
+  }
+
+  .registerBlock {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .registerBlock .registerText {
+    flex-direction: column;
+    margin: 0 auto 0 0;
+  }
+
+  .BottomAd {
+    height: 150px;
+  }
+
+  .topText h5 {
+    flex-direction: column;
+  }
+
+  .hotAd {
+    padding: 0 0 0 .5rem;
+  }
+}
