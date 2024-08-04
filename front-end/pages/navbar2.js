@@ -70,9 +70,8 @@ export default function MainNavbar() {
   )
 }
 
-
-
-{/* <header className={styles.fHeader} />
+{
+  /* <header className={styles.fHeader} />
 <div className={styles.fHeaderUp}>
   <div className={styles.logo}>
     <Link href='#'>
@@ -94,99 +93,97 @@ export default function MainNavbar() {
       <Link href='/forum'>交流討論</Link>
     </li>
   </ul>
-  {/* 等政傑寫 */}
-  {authJWT.isAuth ? (<>
-    {/* <a href='member/' className='main-btn pixel-border-yellow-s'>已登入</a> */}
-    <div className='position-relative zindex-5'>
-        <div className='d-none d-md-block navbar-bg'>
-          <div className='d-flex justify-content-center'>
-            <div className='d-flex justify-content-between align-items-center'>
-              <div className='d-flex '>
-                <div
-                  className='navbar-link-group'
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <LineLogo className='mx-3' />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className={`slide-list d-bg-purple pixel-border-purple ${
-              isHovered ? 'd-block' : ''
-            }`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <div className='d-flex justify-content-center'>
-              <div className=' d-flex justify-content-between align-items-center'>
-                <div className='d-flex'>
-                  <div className='navbar-list '>
-                    <ul className='navbar-slide-list'>
-                      <li className='py-1 fw-bold font-s text-yellow'>
-                        <a href=''>我的頁面</a>
-                      </li>
-                      <li>
-                        <a href=''>我再想想</a>
-                      </li>
-                      <li>
-                        <a href=''>我再想想</a>
-                      </li>
-                      <li>
-                        <a href=''>我再想想</a>
-                      </li>
-                      <li>
-                        <li
-                          href=''
-                          type='button'
-                          className='pixel-border-yellow m-bg-yellow w-100 fw-bold py-1'
-                          onClick={async () => {
-                            const res = await axios.post(
-                              'http://localhost:3002/member/auth-jwt/logout',
-                              {},
-                              {
-                                withCredentials: true, // save cookie in browser
-                              },
-                            )
+  {/* 等政傑寫 */
+}
+// {authJWT.isAuth ? (<>
+//   <div className='position-relative zindex-5'>
+//       <div className='d-none d-md-block navbar-bg'>
+//         <div className='d-flex justify-content-center'>
+//           <div className='d-flex justify-content-between align-items-center'>
+//             <div className='d-flex '>
+//               <div
+//                 className='navbar-link-group'
+//                 onMouseEnter={handleMouseEnter}
+//                 onMouseLeave={handleMouseLeave}
+//               >
+//                 <LineLogo className='mx-3' />
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//         <div
+//           className={`slide-list d-bg-purple pixel-border-purple ${
+//             isHovered ? 'd-block' : ''
+//           }`}
+//           onMouseEnter={handleMouseEnter}
+//           onMouseLeave={handleMouseLeave}
+//         >
+//           <div className='d-flex justify-content-center'>
+//             <div className=' d-flex justify-content-between align-items-center'>
+//               <div className='d-flex'>
+//                 <div className='navbar-list '>
+//                   <ul className='navbar-slide-list'>
+//                     <li className='py-1 fw-bold font-s text-yellow'>
+//                       <a href=''>我的頁面</a>
+//                     </li>
+//                     <li>
+//                       <a href=''>我再想想</a>
+//                     </li>
+//                     <li>
+//                       <a href=''>我再想想</a>
+//                     </li>
+//                     <li>
+//                       <a href=''>我再想想</a>
+//                     </li>
+//                     <li>
+//                       <li
+//                         href=''
+//                         type='button'
+//                         className='pixel-border-yellow m-bg-yellow w-100 fw-bold py-1'
+//                         onClick={async () => {
+//                           const res = await axios.post(
+//                             'http://localhost:3002/member/auth-jwt/logout',
+//                             {},
+//                             {
+//                               withCredentials: true, // save cookie in browser
+//                             },
+//                           )
 
-                            console.log(res.data)
+//                           console.log(res.data)
 
-                            if (res.data.message === 'success') {
-                              setAuthJWT({
-                                isAuth: false,
-                                userData: {
-                                  id: 0,
-                                  name: '',
-                                  username: '',
-                                  r_date: '',
-                                },
-                              })
-                            }
-                            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: '登入成功',
-                timer: 1500,
-              }).then((res) => {
-                window.location.href = '/'
-              })
-                          }}
-                        >
-                          登出
-                        </li>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className='slide-ad mx-3'></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </>) : ('')}
+//                           if (res.data.message === 'success') {
+//                             setAuthJWT({
+//                               isAuth: false,
+//                               userData: {
+//                                 id: 0,
+//                                 name: '',
+//                                 username: '',
+//                                 r_date: '',
+//                               },
+//                             })
+//                           }
+//                           Swal.fire({
+//               position: 'center',
+//               icon: 'success',
+//               title: '登入成功',
+//               timer: 1500,
+//             }).then((res) => {
+//               window.location.href = '/'
+//             })
+//                         }}
+//                       >
+//                         登出
+//                       </li>
+//                     </li>
+//                   </ul>
+//                 </div>
+//               </div>
+//               <div className='slide-ad mx-3'></div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//     </>) : ""}
 
-      
-      
-      </div> */}
+//     </div>
